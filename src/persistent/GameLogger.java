@@ -1,9 +1,13 @@
 package persistent;
 
+import domain.Card;
+import domain.Player;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 public final class GameLogger {
 
@@ -26,9 +30,14 @@ public final class GameLogger {
         return instance;
     }
 
-    public void print(){
-        writer.append("Hello");
+    public void logSetup(ArrayList<Card> bank, ArrayList<Player> players){
+        writer.append("***Game starting with " + bank.size() + " cards and " +
+        players.size() + " players***");
         writer.flush();
-        System.out.print("Hello World");
+    }
+
+    public void logRound(){
+        writer.append("");
+        writer.flush();
     }
 }

@@ -1,4 +1,4 @@
-package service;
+package domain;
 
 import java.util.ArrayList;
 
@@ -16,10 +16,10 @@ public class Deck {
                 else if (value == 11){
                     deck.add(new Card(suits[suit] + "Kn", 10));
                 }
-                else if (value == 11){
+                else if (value == 12){
                     deck.add(new Card(suits[suit] + "Q", 10));
                 }
-                else if (value == 11){
+                else if (value == 13){
                     deck.add(new Card(suits[suit] + "K", 10));
                 }
             }
