@@ -106,6 +106,11 @@ public class Game implements Runnable{
                 for (int k = 0; k < players.get(i).getHand().size(); k++){
                     System.out.println(players.get(i).getHand().get(k).getName());
                 }
+                //Här har jag kört fast lite. Jag börjar tro att min indelning av kort
+                // och dess värde kommer göra det krångligt för mig när det kommer till essen.
+                //Tänkte göra en GameService-metod som kollar om jag har ett ess i handen, men
+                //Hinner nog inte klart med den.
+                //GameService.calculateSum(players.get(i), sum);
                 System.out.println("Your hands value is: " + sum);
                 logger.logRound(players.get(i), sum);
                 if (GameService.is21(sum)){
